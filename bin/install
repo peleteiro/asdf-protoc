@@ -31,10 +31,9 @@ get_arch () {
 
 	case "$(uname -m)" in
 		x86_64|amd64) arch="x86_64"; ;;
-		i686|i386) arch="386"; ;;
-		armv6l|armv7l) arch="armv6l"; ;;
-		aarch64) arch="arm64"; ;;
-		ppc64le) arch="ppc64le"; ;;
+		i686|i386) arch="x86_32"; ;;
+		aarch64) arch="aarch_64"; ;;
+		ppc64le) arch="ppcle_64"; ;;
 		*)
 			echo "Arch '$(uname -m)' not supported!" >&2
 			exit 1
